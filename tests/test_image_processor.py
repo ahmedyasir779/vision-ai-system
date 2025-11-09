@@ -179,7 +179,6 @@ def test_visualization():
 
 def main():
     """Run all tests"""
-    print("\n🚀 DAY 43: IMAGE PROCESSING FUNDAMENTALS TESTS")
     print("Testing all image operations with OpenCV\n")
     
     try:
