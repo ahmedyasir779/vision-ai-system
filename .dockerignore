@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Data (large files - download separately)
+data/raw/
+data/processed/
+data/processed_real/
+data/real_dataset/
+
+# Keep only best model, exclude training checkpoints
+models/checkpoints/checkpoint_epoch_*.pth
+models/checkpoints_real/checkpoint_epoch_*.pth
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Git
+.git/
+.gitignore
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+uploads/
+temp/
+*.tmp
+
+# Tests
+tests/
+
+# Documentation source
+docs/
+
+# Large result files
+results/

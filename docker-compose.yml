@@ -1,0 +1,22 @@
+
+version: '3.8'
+
+services:
+  vision-ai:
+    build: .
+    container_name: vision-ai-system
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./models:/app/models
+      - ./uploads:/app/uploads
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
